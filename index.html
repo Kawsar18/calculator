@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+  <body>
+    <div class="flex h-screen w-full items-center justify-center bg-cyan-100">
+      <div class="rounded-[2vh] bg-slate-800 p-[2vh]">
+        <form>
+          <div class="flex justify-end m-[1vh] py-[2vh]">
+            <input
+              type="text"
+              name="display"
+              class="outline-none text-right w-[36vh] bg-transparent text-white text-[3vh]"
+              readonly />
+          </div>
+          <div>
+            <input
+              type="button"
+              value="AC"
+              onclick="display.value = ''"
+              class="m-[1vh] size-[7vh] cursor-pointer rounded-[1vh] bg-transparent text-[3vh] text-teal-400 shadow shadow-slate-500 active:shadow-lg active:shadow-teal-400" />
+            <input
+              type="button"
+              value="DE"
+              onclick="display.value = display.value.toString().slice(0, -1)"
+              class="m-[1vh] size-[7vh] cursor-pointer rounded-[1vh] bg-transparent text-[3vh] text-teal-400 shadow shadow-slate-500 active:shadow-lg active:shadow-teal-400" />
+            <input
+              type="button"
+              value="."
+              onclick="display.value += '.'"
+              class="m-[1vh] size-[7vh] cursor-pointer rounded-[1vh] bg-transparent text-[3vh] text-teal-400 shadow shadow-slate-500 active:shadow-lg active:shadow-teal-400" />
+            <input
+              type="button"
+              value="/"
+              onclick="display.value += '/'"
+              class="m-[1vh] size-[7vh] cursor-pointer rounded-[1vh] bg-transparent text-[3vh] text-teal-400 shadow shadow-slate-500 active:shadow-lg active:shadow-teal-400" />
+          </div>
+          <div>
+            <input
+              type="button"
+              value="7"
+              onclick="display.value += 7"
+              class="m-[1vh] size-[7vh] cursor-pointer rounded-[1vh] bg-transparent text-[3vh] text-white shadow shadow-slate-500 active:shadow-lg active:shadow-teal-400" />
+            <input
+              type="button"
+              value="8"
+              onclick="display.value += 8"
+              class="m-[1vh] size-[7vh] cursor-pointer rounded-[1vh] bg-transparent text-[3vh] text-white shadow shadow-slate-500 active:shadow-lg active:shadow-teal-400" />
+            <input
+              type="button"
+              value="9"
+              onclick="display.value += 9"
+              class="m-[1vh] size-[7vh] cursor-pointer rounded-[1vh] bg-transparent text-[3vh] text-white shadow shadow-slate-500 active:shadow-lg active:shadow-teal-400" />
+            <input
+              type="button"
+              value="+"
+              onclick="display.value += '+'"
+              class="m-[1vh] size-[7vh] cursor-pointer rounded-[1vh] bg-transparent text-[3vh] text-teal-400 shadow shadow-slate-500 active:shadow-lg active:shadow-teal-400" />
+          </div>
+          <div>
+            <input
+              type="button"
+              value="4"
+              onclick="display.value += 4"
+              class="m-[1vh] size-[7vh] cursor-pointer rounded-[1vh] bg-transparent text-[3vh] text-white shadow shadow-slate-500 active:shadow-lg active:shadow-teal-400" />
+            <input
+              type="button"
+              value="5"
+              onclick="display.value += 5"
+              class="m-[1vh] size-[7vh] cursor-pointer rounded-[1vh] bg-transparent text-[3vh] text-white shadow shadow-slate-500 active:shadow-lg active:shadow-teal-400" />
+            <input
+              type="button"
+              value="6"
+              onclick="display.value += 6"
+              class="m-[1vh] size-[7vh] cursor-pointer rounded-[1vh] bg-transparent text-[3vh] text-white shadow shadow-slate-500 active:shadow-lg active:shadow-teal-400" />
+            <input
+              type="button"
+              value="-"
+              onclick="display.value += '-'"
+              class="m-[1vh] size-[7vh] cursor-pointer rounded-[1vh] bg-transparent text-[3vh] text-teal-400 shadow shadow-slate-500 active:shadow-lg active:shadow-teal-400" />
+          </div>
+          <div>
+            <input
+              type="button"
+              value="1"
+              onclick="display.value += 1"
+              class="m-[1vh] size-[7vh] cursor-pointer rounded-[1vh] bg-transparent text-[3vh] text-white shadow shadow-slate-500 active:shadow-lg active:shadow-teal-400" />
+            <input
+              type="button"
+              value="2"
+              onclick="display.value += 2"
+              class="m-[1vh] size-[7vh] cursor-pointer rounded-[1vh] bg-transparent text-[3vh] text-white shadow shadow-slate-500 active:shadow-lg active:shadow-teal-400" />
+            <input
+              type="button"
+              value="3"
+              onclick="display.value += 3"
+              class="m-[1vh] size-[7vh] cursor-pointer rounded-[1vh] bg-transparent text-[3vh] text-white shadow shadow-slate-500 active:shadow-lg active:shadow-teal-400" />
+            <input
+              type="button"
+              value="*"
+              onclick="display.value += '*'"
+              class="m-[1vh] size-[7vh] cursor-pointer rounded-[1vh] bg-transparent text-[3vh] text-teal-400 shadow shadow-slate-500 active:shadow-lg active:shadow-teal-400" />
+          </div>
+          <div>
+            <input
+              type="button"
+              value="00"
+              onclick="display.value += 00"
+              class="m-[1vh] size-[7vh] cursor-pointer rounded-[1vh] bg-transparent text-[3vh] text-white shadow shadow-slate-500 active:shadow-lg active:shadow-teal-400" />
+            <input
+              type="button"
+              value="0"
+              onclick="display.value += 0"
+              class="m-[1vh] size-[7vh] cursor-pointer rounded-[1vh] bg-transparent text-[3vh] text-white shadow shadow-slate-500 active:shadow-lg active:shadow-teal-400" />
+            <input
+              type="button"
+              value="="
+              onclick="display.value = eval(display.value)"
+              class="m-[1vh] w-[17vh] h-[7vh] cursor-pointer rounded-[1vh] bg-transparent text-[3vh] text-teal-400 shadow shadow-slate-500 active:shadow-lg active:shadow-teal-400" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
